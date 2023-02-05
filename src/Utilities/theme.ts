@@ -1,6 +1,6 @@
 "use strict";
 export namespace Theme {
-    export function Change() {
+    export function Change(): void {
         const themeBtn = document.querySelector('.theme-btn');
         if (themeBtn) {
             themeBtn.addEventListener('click', () => {
