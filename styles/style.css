@@ -234,7 +234,7 @@ nav .profile-area button {
     display: none
 }
 
-/* ASIDE AND SIDEBAR */
+/*----------ASIDE AND SIDEBAR----------*/
 main {
     display: grid;
     grid-template-columns: 16rem auto 30rem;
@@ -250,7 +250,7 @@ main aside {
     height: 88vh;
 }
 
-/* TABLET? */
+/*----------TABLET?----------*/
 main aside button#close-btn {
     display: none;
 }
@@ -358,7 +358,7 @@ main aside .sidebar h4 {
     }
 }
 
-/* MOBILE PHONE */
+/*----------MOBILE PHONE----------*/
 @media screen and (max-width: 600px) {
     nav .profile-area{
         gap: 2.6rem;
