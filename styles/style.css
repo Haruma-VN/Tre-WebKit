@@ -153,6 +153,13 @@ nav img.logo {
     width: 7rem;
 }
 
+nav .container button#menu-btn {
+    display: none;
+    background: transparent;
+    color: var(--color-dark);
+}
+
+
 nav .file-display-bar {
     background: var(--color-light);
     padding: var(--padding-2) var(--card-padding);
@@ -304,7 +311,7 @@ main aside .sidebar h4 {
         gap: 2rem;
     }
 
-    nav .profile-area button#menu-btn {
+    nav .container button#menu-btn {
         display: inline;
         background: transparent;
         color: var(--color-dark);
