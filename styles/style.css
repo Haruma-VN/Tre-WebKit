@@ -192,6 +192,7 @@ nav .profile-area {
 
 nav .profile-area .theme-btn {
     display: flex;
+    align-items: center;
     background: var(--color-light);
     width: 5rem;
     height: 2rem;
@@ -200,12 +201,13 @@ nav .profile-area .theme-btn {
 }
 
 .darkmode-toggle-display {
-    width: 50%;
-    height: 100%;
+    width: 45%;
+    height: 90%;
     position: relative;
+    left: 5%;
     display: block;
     background: #ebebeb;
-    border-radius: 200px;
+    border-radius: var(--border-radius-2);
     box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
     cursor: pointer;
 }
@@ -218,7 +220,7 @@ nav .profile-area .theme-btn {
     top: 1%;
     left: 0%;
     background: linear-gradient(180deg, #ffcc89, #d8860b);
-    border-radius: 200px;
+    border-radius: var(--border-radius-2);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -478,6 +480,3 @@ input:checked+label svg.sun {
 input:checked+label svg.moon {
     fill: #fff;
 }
-
-
-

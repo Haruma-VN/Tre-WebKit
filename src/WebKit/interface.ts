@@ -1,6 +1,6 @@
 "use strict";
 export namespace Interface {
-
+    //#region 
     // Any strings
     export type zombie = string;
 
@@ -34,4 +34,6 @@ export namespace Interface {
         random?: RandomSpawn;
         groups: ZombiesData;
     }
+
+    //#endregion
 }
