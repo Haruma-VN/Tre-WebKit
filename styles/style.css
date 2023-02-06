@@ -269,6 +269,7 @@ main aside .sidebar a {
     height: 4.2rem;
     color: var(--color-gray-light);
     position: relative;
+    transition: background-color 200ms ease-in-out;
 }
 
 main aside .sidebar a span {
