@@ -7,10 +7,12 @@ export namespace SideBar {
         if (sidebar) {
             menuBtn?.addEventListener('click', () => {
                 sidebar.style.display = 'block';
+                sidebar.style.transition = 'all 0.5s ease-in-out';
             });
             closeBtn?.addEventListener('click', () => {
                 sidebar.style.display = 'none';
-            })
+                sidebar.style.transition = 'all 0.5s ease-in-out';
+            });
         }
     }
     export async function ChangeDisplay(e: any): Promise<void> {
@@ -24,12 +26,15 @@ export namespace SideBar {
     }
 
     export function AddOnClickFunctionOnSideBarClass(): void {
-        const sidebar = document.querySelectorAll('.sidebar a');
-        sidebar.forEach(function (sidebar_child) {
-            (sidebar_child as any).onclick = function () {
-                SideBar.ChangeDisplay(this);
-            }
-        })
-        return
+        document.addEventListener('DOMContentLoaded', async () => {
+            const sidebar = document.querySelectorAll('.sidebar a');
+            sidebar.forEach(function (sidebar_child) {
+                (sidebar_child as any).onclick = function () {
+                    SideBar.ChangeDisplay(this);
+                }
+            })
+            return
+        });
+        return;
     }
 }

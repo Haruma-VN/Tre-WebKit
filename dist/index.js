@@ -12,11 +12,11 @@ var Tre;
                 SideBar.AddOnClickFunctionOnSideBarClass();
             }
             WebKit.Main = Main;
+            async function ChangeSideBarChild(e) {
+                return await SideBar.ChangeDisplay(e);
+            }
+            WebKit.ChangeSideBarChild = ChangeSideBarChild;
         })(WebKit = LevelMaker.WebKit || (LevelMaker.WebKit = {}));
     })(LevelMaker = Tre.LevelMaker || (Tre.LevelMaker = {}));
 })(Tre || (Tre = {}));
-export async function ChangeSideBarChild(e) {
-    return await SideBar.ChangeDisplay(e);
-}
-;
 Tre.LevelMaker.WebKit.Main();

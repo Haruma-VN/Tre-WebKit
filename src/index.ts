@@ -6,10 +6,11 @@ namespace Tre.LevelMaker.WebKit {
         Theme.Change();
         SideBar.AddOnClickFunctionOnSideBarClass();
     }
+
+    export async function ChangeSideBarChild(e: any): Promise<void> {
+        return await SideBar.ChangeDisplay(e);
+    }    
 }
 
-export async function ChangeSideBarChild(e: any): Promise<void> {
-    return await SideBar.ChangeDisplay(e);
-};
 
 Tre.LevelMaker.WebKit.Main()

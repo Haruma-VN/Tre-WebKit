@@ -315,6 +315,7 @@ main aside {
     flex-direction: column;
     justify-content: space-between;
     height: 88vh;
+    transition: right 500ms ease-in-out;
 }
 
 /*----------TABLET?----------*/
@@ -329,10 +330,8 @@ main aside .sidebar a {
     height: 4.2rem;
     color: var(--color-gray-light);
     position: relative;
-    transition: background 200ms ease-in-out;
+    transition:  200ms ease-in-out;
 }
-
-
 
 main aside .sidebar a span {
     font-size: 1.7rem;
@@ -444,7 +443,7 @@ main aside .sidebar h4 {
     }
 }
 
-/* Dark Mode */
+/*----------Dark Mode----------*/
 .dark-theme {
     --color-white: #131316;
     --color-light: #23232a;
@@ -479,3 +478,6 @@ input:checked+label svg.sun {
 input:checked+label svg.moon {
     fill: #fff;
 }
+
+
+

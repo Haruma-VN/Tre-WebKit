@@ -8,9 +8,11 @@ export var SideBar;
         if (sidebar) {
             menuBtn?.addEventListener('click', () => {
                 sidebar.style.display = 'block';
+                sidebar.style.transition = 'all 0.5s ease-in-out';
             });
             closeBtn?.addEventListener('click', () => {
                 sidebar.style.display = 'none';
+                sidebar.style.transition = 'all 0.5s ease-in-out';
             });
         }
     }
@@ -26,11 +28,14 @@ export var SideBar;
     }
     SideBar.ChangeDisplay = ChangeDisplay;
     function AddOnClickFunctionOnSideBarClass() {
-        const sidebar = document.querySelectorAll('.sidebar a');
-        sidebar.forEach(function (sidebar_child) {
-            sidebar_child.onclick = function () {
-                SideBar.ChangeDisplay(this);
-            };
+        document.addEventListener('DOMContentLoaded', async () => {
+            const sidebar = document.querySelectorAll('.sidebar a');
+            sidebar.forEach(function (sidebar_child) {
+                sidebar_child.onclick = function () {
+                    SideBar.ChangeDisplay(this);
+                };
+            });
+            return;
         });
         return;
     }
