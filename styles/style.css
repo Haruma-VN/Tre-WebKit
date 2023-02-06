@@ -199,6 +199,66 @@ nav .profile-area .theme-btn {
     cursor: pointer;
 }
 
+.darkmode-toggle-display {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.darkmode-toggle-display:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 200px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.darkmode-toggle-display::after {
+    box-shadow: none;
+}
+
+#darkmode-toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#darkmode-toggle::after {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    box-shadow: none;
+}
+
+input:checked+label {
+    background: #242424;
+    box-shadow: none;
+}
+
+input:checked+label:after {
+    left: 50%;
+    transform: translateX(50%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label,
+label:after {
+    transition: 0.3s
+}
+
+label:active:after {
+    width: 50%;
+}
+
 nav .profile-area .theme-btn span {
     width: 50%;
     height: 100%;
@@ -283,7 +343,7 @@ main aside .sidebar a span {
 main aside .sidebar a.active {
     background: var(--color-white);
     color: var(--color-primary);
-    animation:  200ms ease-in-out;
+    animation: 200ms ease-in-out;
 }
 
 main aside .sidebar a.active:before {
@@ -390,4 +450,32 @@ main aside .sidebar h4 {
     --color-light: #23232a;
     --color-dark: #ddd;
     --color-gray-dark: #adacb5;
+}
+
+label svg {
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    z-index: 100;
+}
+
+label svg.sun {
+    left: 20%;
+    fill: #fff;
+    transition: 0.3s;
+}
+
+label svg.moon {
+    left: 100%;
+    fill: #7e7e7e;
+    margin-left: 20%;
+    transition: 0.3s;
+}
+
+input:checked+label svg.sun {
+    fill: #7e7e7e;
+}
+
+input:checked+label svg.moon {
+    fill: #fff;
 }
