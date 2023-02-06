@@ -269,8 +269,10 @@ main aside .sidebar a {
     height: 4.2rem;
     color: var(--color-gray-light);
     position: relative;
-    transition: background-color 200ms ease-in-out;
+    transition: background 200ms ease-in-out;
 }
+
+
 
 main aside .sidebar a span {
     font-size: 1.7rem;
@@ -281,6 +283,7 @@ main aside .sidebar a span {
 main aside .sidebar a.active {
     background: var(--color-white);
     color: var(--color-primary);
+    animation:  200ms ease-in-out;
 }
 
 main aside .sidebar a.active:before {
@@ -308,7 +311,7 @@ main aside .sidebar h4 {
         display: none;
     }
 
-    nav .profile-area{
+    nav .profile-area {
         gap: 2rem;
     }
 
@@ -357,7 +360,7 @@ main aside .sidebar h4 {
         cursor: pointer;
     }
 
-    main aside .sidebar{
+    main aside .sidebar {
         margin-top: 4rem;
     }
 
@@ -368,7 +371,7 @@ main aside .sidebar h4 {
 
 /*----------MOBILE PHONE----------*/
 @media screen and (max-width: 600px) {
-    nav .profile-area{
+    nav .profile-area {
         gap: 2.6rem;
     }
 

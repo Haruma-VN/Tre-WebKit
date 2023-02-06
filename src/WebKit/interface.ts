@@ -29,6 +29,7 @@ export namespace Interface {
 
     // Wave Data Constructor
     export interface RowDataConstructor {
+        notify?: NotifyEvent;
         plantfood?: plantfood;
         random?: RandomSpawn;
         groups: ZombiesData;
