@@ -12,7 +12,7 @@ export namespace WebItem {
     }
 
     /*----------DOMElement----------*/
-    export class DOMElement extends Restriction{
+    export class DOMElement extends Restriction {
 
         /*----------Method must be private, unaccessable outisde the class----------*/
         private readonly element: HTMLElement;
@@ -68,5 +68,39 @@ export namespace WebItem {
             children.forEach(child => this.element.appendChild(child.element));
             return this;
         }
+    }
+
+    export function CollapsedButton(collapseSide: Element): void {
+        const collapseButton = document.querySelector('.collapse-button');
+        const collapseArea = (collapseSide);
+        if (collapseButton) {
+            collapseButton.addEventListener('click', () => {
+                if (collapseArea) {
+                    const _check_collapse_icon_changer_for_span_display_ = collapseArea.classList.toggle('collapsed');
+                    const span_icon_area_data = collapseButton.querySelector("span");
+                    if(_check_collapse_icon_changer_for_span_display_){
+                        if(span_icon_area_data){
+                            span_icon_area_data.innerText = "expand_more";
+                        }
+                    }
+                    else{
+                        if(span_icon_area_data){
+                            span_icon_area_data.innerText = "expand_less";
+                        }
+                    }
+                }
+            });
+        }
+        return
+    }
+
+    export function AddCollapseToBtn(): void {
+        const BtnArray = document.querySelectorAll("div .collapse-button");
+        BtnArray.forEach(function (e: any) {
+            if (e) {
+                CollapsedButton(e.parentNode.querySelector(".form-details"));
+            }
+        })
+        return;
     }
 }

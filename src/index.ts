@@ -5,11 +5,12 @@ namespace Tre.LevelMaker.WebKit {
         SideBar.ShowSideBar();
         Theme.Change();
         SideBar.AddOnClickFunctionOnSideBarClass();
+        WebItem.AddCollapseToBtn();
     }
 
     export async function ChangeSideBarChild(e: any): Promise<void> {
         return await SideBar.ChangeDisplay(e);
-    }    
+    }
 }
 
 

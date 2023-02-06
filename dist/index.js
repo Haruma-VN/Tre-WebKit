@@ -1,5 +1,5 @@
 "use strict";
-import { SideBar, Theme } from './Utilities/utilities.js';
+import { SideBar, Theme, WebItem } from './Utilities/utilities.js';
 var Tre;
 (function (Tre) {
     var LevelMaker;
@@ -10,6 +10,7 @@ var Tre;
                 SideBar.ShowSideBar();
                 Theme.Change();
                 SideBar.AddOnClickFunctionOnSideBarClass();
+                WebItem.AddCollapseToBtn();
             }
             WebKit.Main = Main;
             async function ChangeSideBarChild(e) {
