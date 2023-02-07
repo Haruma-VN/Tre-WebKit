@@ -306,7 +306,7 @@ nav .profile-area button {
 /*----------ASIDE AND SIDEBAR----------*/
 main {
     display: grid;
-    grid-template-columns: 16rem auto 30rem;
+    grid-template-columns: 15rem auto 14rem;
     gap: 2rem;
     width: 96%;
     margin: 1rem auto 4rem;
@@ -551,9 +551,10 @@ input:checked+label svg.moon {
 
 .details-side .form-details .fields {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    
 }
 
 .form-details .fields .input-field {
@@ -563,6 +564,7 @@ input:checked+label svg.moon {
     margin: 4px 0;
     transition: max-height 0.5s ease-out;
     overflow: hidden;
+    padding: 10px;
 }
 
 .form-details.collapsed {
